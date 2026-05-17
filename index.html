@@ -29,11 +29,11 @@
           </button>
           <ul class="nav-links" id="site-menu">
             <li><a href="#home">Home</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#publications">Publications</a></li>
             <li><a href="#education">Education</a></li>
+            <li><a href="#publications">Publications</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#awards">Awards</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -49,29 +49,51 @@
           />
         </div>
         <div class="profile-info">
-          <p class="eyebrow">Peking University &middot; School of Electronics</p>
           <h1 id="profile-title">Yong Yu</h1>
-          <p class="role">Ph.D. Student in Network Engineering</p>
+          <p class="role">
+            Ph.D. Student in Network Engineering &middot; Integrated Sensing-Communication-Computing
+          </p>
           <p>
             I am a Ph.D. student at Peking University, advised by Prof. Xiang Cheng. My research
             focuses on integrated sensing-communication-computation, intelligent connected vehicles,
             and resource allocation for future wireless systems.
           </p>
-          <p>Email: <a href="mailto:yuyong_uestc@163.com">yuyong_uestc@163.com</a></p>
+          <div class="contact-line">
+            <span>Email: <a href="mailto:yuyong_uestc@163.com">yuyong_uestc@163.com</a></span>
+            <span>Beijing, China</span>
+          </div>
           <div class="profile-links" aria-label="Profile links">
             <a href="https://github.com/YongYu-02" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://yongyu-pku2023.github.io/cv/" target="_blank" rel="noreferrer">CV</a>
+            <a href="https://scholar.google.com/scholar?q=Yong+Yu+Peking+University+Xiang+Cheng" target="_blank" rel="noreferrer">Google Scholar</a>
             <a href="https://space.bilibili.com/204131230?spm_id_from=333.1007.0.0" target="_blank" rel="noreferrer">Bilibili</a>
           </div>
+          <div class="cv-line">
+            <a href="https://yongyu-pku2023.github.io/cv/" target="_blank" rel="noreferrer">CV</a>
+          </div>
           <div class="research-interests">
-            <p>
-              Research Topics:
-              <span>ISCC</span>
-              <span>C-V2X</span>
-              <span>Autonomous Driving</span>
-              <span>AIGC</span>
-              <span>Resource Allocation</span>
-            </p>
+            <h2>Research Topics</h2>
+            <div class="research-topic-grid">
+              <article class="research-topic-card" data-tilt>
+                <span>ISCC</span>
+                <p>Joint design of sensing, communication, and computing for future wireless systems.</p>
+              </article>
+              <article class="research-topic-card" data-tilt>
+                <span>C-V2X</span>
+                <p>Reliable vehicle-to-everything communication and cooperative perception.</p>
+              </article>
+              <article class="research-topic-card" data-tilt>
+                <span>Autonomous Driving</span>
+                <p>Cloud-edge-terminal collaboration for connected mobility and intelligent driving.</p>
+              </article>
+              <article class="research-topic-card" data-tilt>
+                <span>AIGC</span>
+                <p>Generative intelligence for scenario synthesis, data augmentation, and decision support.</p>
+              </article>
+              <article class="research-topic-card" data-tilt>
+                <span>Resource Allocation</span>
+                <p>Scheduling and optimization for multi-agent, edge, and wireless network resources.</p>
+              </article>
+            </div>
           </div>
         </div>
       </section>
@@ -94,25 +116,29 @@
         </ul>
       </section>
 
-      <section class="content-section" id="research" aria-labelledby="research-title">
-        <h2 id="research-title">Research</h2>
-        <p>
-          My work studies the design of intelligent wireless systems where communication, sensing,
-          and computing resources are jointly considered. I am especially interested in networked
-          perception and cooperative intelligence for connected mobility.
-        </p>
-        <div class="topic-grid">
-          <article class="topic-card">
-            <h3>Integrated sensing-communication-computation</h3>
-            <p>Cross-layer system design for jointly optimized sensing, links, and compute tasks.</p>
+      <section class="content-section" id="education" aria-labelledby="education-title">
+        <h2 id="education-title">Education</h2>
+        <div class="entry-list">
+          <article class="entry-item">
+            <div class="entry-date">2024.09 - 2029.06</div>
+            <div>
+              <h3>Peking University</h3>
+              <p>Ph.D. in Network Engineering, School of Electronics.</p>
+            </div>
           </article>
-          <article class="topic-card">
-            <h3>Intelligent connected vehicles</h3>
-            <p>C-V2X, collaborative perception, and cloud-edge-terminal coordination.</p>
+          <article class="entry-item">
+            <div class="entry-date">2021.09 - 2024.06</div>
+            <div>
+              <h3>University of Electronic Science and Technology of China</h3>
+              <p>M.S. in Electronic Science and Technology, advised by Associate Prof. Ruijin Sun.</p>
+            </div>
           </article>
-          <article class="topic-card">
-            <h3>Resource allocation</h3>
-            <p>Scheduling, multi-agent coordination, robust optimization, and task allocation.</p>
+          <article class="entry-item">
+            <div class="entry-date">2017.09 - 2021.06</div>
+            <div>
+              <h3>Chengdu University of Information Technology</h3>
+              <p>B.E. in Electronic Information Engineering.</p>
+            </div>
           </article>
         </div>
       </section>
@@ -174,33 +200,6 @@
                 <a href="https://doi.org/10.1109/MWC.004.2300572" target="_blank" rel="noreferrer">Paper</a>
                 <a href="https://arxiv.org/abs/2407.01956" target="_blank" rel="noreferrer">arXiv</a>
               </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="content-section" id="education" aria-labelledby="education-title">
-        <h2 id="education-title">Education</h2>
-        <div class="entry-list">
-          <article class="entry-item">
-            <div class="entry-date">2024.09 - 2029.06</div>
-            <div>
-              <h3>Peking University</h3>
-              <p>Ph.D. in Network Engineering, School of Electronics.</p>
-            </div>
-          </article>
-          <article class="entry-item">
-            <div class="entry-date">2021.09 - 2024.06</div>
-            <div>
-              <h3>University of Electronic Science and Technology of China</h3>
-              <p>M.S. in Electronic Science and Technology, advised by Associate Prof. Ruijin Sun.</p>
-            </div>
-          </article>
-          <article class="entry-item">
-            <div class="entry-date">2017.09 - 2021.06</div>
-            <div>
-              <h3>Chengdu University of Information Technology</h3>
-              <p>B.E. in Electronic Information Engineering.</p>
             </div>
           </article>
         </div>
