@@ -404,25 +404,21 @@ main.container {
   font-weight: 800;
 }
 
-.project-item {
-  padding: 18px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: rgba(248, 248, 248, 0.72);
-}
-
-.project-item p,
 .entry-item p {
   margin-bottom: 0;
   color: var(--muted);
 }
 
-.publication-list {
+.publication-list,
+.education-list,
+.project-list {
   display: grid;
   gap: 18px;
 }
 
-.publication-card {
+.publication-card,
+.education-card,
+.project-card {
   --mx: 50%;
   --my: 50%;
   position: relative;
@@ -443,7 +439,9 @@ main.container {
   transition: border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
 }
 
-.publication-card::before {
+.publication-card::before,
+.education-card::before,
+.project-card::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -454,16 +452,22 @@ main.container {
   z-index: -1;
 }
 
-.publication-card:hover {
+.publication-card:hover,
+.education-card:hover,
+.project-card:hover {
   border-color: rgba(47, 143, 134, 0.3);
   box-shadow: var(--lifted-shadow);
 }
 
-.publication-card:hover::before {
+.publication-card:hover::before,
+.education-card:hover::before,
+.project-card:hover::before {
   opacity: 1;
 }
 
-.pub-thumb {
+.pub-thumb,
+.edu-mark,
+.project-thumb {
   position: relative;
   min-height: 160px;
   border-radius: 12px;
@@ -471,13 +475,67 @@ main.container {
   background: #dfe8e2;
 }
 
-.pub-thumb::before {
+.pub-thumb::before,
+.edu-mark::before,
+.project-thumb::before {
   content: "";
   position: absolute;
   inset: 0;
   background:
     linear-gradient(120deg, rgba(255, 255, 255, 0.48), transparent 48%),
     radial-gradient(circle at 30% 28%, rgba(255, 255, 255, 0.52), transparent 7rem);
+}
+
+.edu-mark {
+  display: grid;
+  place-items: center;
+  padding: 22px;
+}
+
+.project-label {
+  position: relative;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.school-logo {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: min(76%, 132px);
+  max-height: 124px;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 26px rgba(31, 42, 39, 0.16));
+  transition: transform 260ms ease, filter 260ms ease;
+}
+
+.education-card:hover .school-logo {
+  transform: translateY(-4px) scale(1.04);
+  filter: drop-shadow(0 22px 30px rgba(31, 42, 39, 0.22));
+}
+
+.pku-logo {
+  width: min(72%, 118px);
+}
+
+.uestc-logo {
+  width: min(86%, 150px);
+}
+
+.edu-mark-pku {
+  background:
+    radial-gradient(circle at 74% 25%, rgba(171, 24, 45, 0.18), transparent 7rem),
+    radial-gradient(circle at 16% 82%, rgba(47, 143, 134, 0.18), transparent 8rem),
+    linear-gradient(145deg, #ffffff, #f3f7f5);
+}
+
+.edu-mark-uestc {
+  background:
+    radial-gradient(circle at 72% 28%, rgba(55, 114, 183, 0.2), transparent 7rem),
+    radial-gradient(circle at 18% 82%, rgba(197, 150, 56, 0.2), transparent 8rem),
+    linear-gradient(145deg, #ffffff, #f5f4ef);
 }
 
 .pub-thumb-sensing {
@@ -579,7 +637,9 @@ main.container {
   font-weight: 900;
 }
 
-.pub-content {
+.pub-content,
+.edu-content,
+.project-content {
   min-width: 0;
   padding: 4px 4px 4px 0;
 }
@@ -617,11 +677,87 @@ main.container {
   color: rgba(31, 36, 35, 0.78);
 }
 
-.pub-links {
+.pub-links,
+.project-links {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 12px;
+}
+
+.project-links:empty {
+  display: none;
+}
+
+.project-links a {
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: 999px;
+  color: var(--teal-dark);
+  background: rgba(47, 143, 134, 0.1);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.project-links a:hover {
+  color: var(--teal-dark);
+  background: rgba(47, 143, 134, 0.16);
+  transform: translateY(-1px);
+}
+
+.edu-details {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.edu-details li {
+  color: var(--muted);
+}
+
+.edu-details span {
+  display: inline-flex;
+  min-width: 72px;
+  color: var(--coral);
+  font-weight: 800;
+}
+
+.project-thumb {
+  display: grid;
+  place-items: end start;
+  padding: 18px;
+}
+
+.project-thumb-gnss {
+  background:
+    radial-gradient(circle at 72% 30%, rgba(47, 143, 134, 0.72), transparent 7rem),
+    radial-gradient(circle at 18% 80%, rgba(223, 106, 82, 0.64), transparent 8rem),
+    #dfe8e2;
+}
+
+.project-thumb-uav {
+  background:
+    radial-gradient(circle at 72% 28%, rgba(197, 150, 56, 0.7), transparent 7rem),
+    radial-gradient(circle at 18% 80%, rgba(110, 106, 199, 0.58), transparent 8rem),
+    #e9e2d6;
+}
+
+.project-thumb-satellite {
+  background:
+    radial-gradient(circle at 70% 30%, rgba(110, 106, 199, 0.68), transparent 7rem),
+    radial-gradient(circle at 18% 82%, rgba(47, 143, 134, 0.66), transparent 8rem),
+    #dfe5ea;
+}
+
+.project-thumb-agent {
+  background:
+    radial-gradient(circle at 70% 30%, rgba(223, 106, 82, 0.68), transparent 7rem),
+    radial-gradient(circle at 18% 80%, rgba(197, 150, 56, 0.7), transparent 8rem),
+    #e8e1d7;
 }
 
 .entry-list {
@@ -643,12 +779,6 @@ main.container {
 
 .entry-date {
   font-size: 0.92rem;
-}
-
-.project-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
 }
 
 .award-list span {
@@ -703,7 +833,9 @@ main.container {
     grid-template-columns: 1fr;
   }
 
-  .publication-card {
+  .publication-card,
+  .education-card,
+  .project-card {
     grid-template-columns: 180px minmax(0, 1fr);
   }
 }
@@ -779,11 +911,15 @@ main.container {
   }
 
   .publication-card,
+  .education-card,
+  .project-card,
   .entry-item {
     grid-template-columns: 1fr;
   }
 
-  .pub-thumb {
+  .pub-thumb,
+  .edu-mark,
+  .project-thumb {
     min-height: 190px;
   }
 }
@@ -799,7 +935,8 @@ main.container {
   }
 
   .profile-links a,
-  .pub-links a {
+  .pub-links a,
+  .project-links a {
     font-size: 0.86rem;
   }
 
